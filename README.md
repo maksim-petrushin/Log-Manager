@@ -3,12 +3,11 @@
 #### Home page shows all the active operations
 ![alt text](./images/home.png)
 #### Go to Add Ticket to create a new "ticket" or operation
-##### Type in:
 ##### -Type in the title of the "ticket"
 ##### -Type in the description of the "ticket"
 ##### -Select the designated department of this "ticket"
 ![alt text](./images/create_ticket.png)
-#### Go back to Home page and it now reflects the newly created "ticket"
+#### Clicking "Create" button will direct user to the Home page which now reflects the newly created "ticket"
 ![alt text](./images/updated_home.png)
 #### Clicking on the "comment" or Follow-up field will dirrect you to an isolated page of the ticket you want to comment on.
 #### Type in your message and click Add a follow-up
