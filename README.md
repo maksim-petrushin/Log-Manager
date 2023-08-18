@@ -3,6 +3,10 @@
 #### Home page shows all the active operations
 ![alt text](./images/home.png)
 #### Go to Add Ticket to create a new "ticket" or operation
+##### Type in:
+##### -Type in the title of the "ticket"
+##### -Type in the description of the "ticket"
+##### -Select the designated department of this "ticket"
 ![alt text](./images/create_ticket.png)
 #### Go back to Home page and it now reflects the newly created "ticket"
 ![alt text](./images/updated_home.png)
