@@ -3,7 +3,7 @@
 ### A "log" is a time-stamped documentation of events related to work operations
 
 #### Adding a new log
-![alt text](./images/1_create_ticket.gif)
+![1_create_ticket](https://github.com/maksim-petrushin/Maintenance-Operations-Board/assets/136845116/558a318b-8812-42ed-a043-46bd44a53d2f)
 
 
 ![alt text](./images/create_ticket.png)
