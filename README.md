@@ -1,7 +1,7 @@
 # Maintenance-Operations-Board
 ### Demonstration Repository of a Maintenance and Operations  Board project
 #### Home page shows all the active operations
-![alt text]([./images/1_creating_ticket.gif))
+![alt text]([./images/1_creating_ticket.gif)
 #### Go to Add Ticket to create a new "ticket" or operation
 ##### -Type in the title of the "ticket"
 ##### -Type in the description of the "ticket"
