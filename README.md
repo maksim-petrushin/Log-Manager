@@ -1,11 +1,11 @@
 # Log Manager
-### Log Manager is a web board that can be used by a start up company to manage and visualize "logs".
-### A "log" is a time-stamped documentation of events related to work operations
-
-* [Demonstration](#demonstration-:)
+* [Brief Summary](#brief-summary:)
+* [Demonstration](#demonstration:)
     * [Adding a new log](#adding-a-new-log)
     * [Adding a new log](#adding-a-follow-up-on-a-log-and-sorting-logs-by-date)
     * [Adding a new log](#filtering-or-isolating-all-time-logs-using-any-search-combination)
+### Brief Summary:
+Log Manager is a web board that can be used by a start up company to manage and visualize "logs". A "log" is a time-stamped documentation of events related to work operations
 
 ### Demonstration:
 #### Adding a new log
