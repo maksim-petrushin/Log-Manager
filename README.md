@@ -1,11 +1,11 @@
-# Maintenance-Operations-Board
-### Demonstration Repository of a Maintenance and Operations  Board project
-#### Home page shows all the active operations
-![alt text](./images/1_creating_ticket.gif)
-#### Go to Add Ticket to create a new "ticket" or operation
-##### -Type in the title of the "ticket"
-##### -Type in the description of the "ticket"
-##### -Select the designated department of this "ticket"
+# Log Manager
+### Log Manager is a web board that can be used by a start up company to manage and visualize "logs".
+### A "log" is a time-stamped documentation of events related to work operations
+
+#### Adding a new log
+![alt text](./images/1_create_ticket.gif)
+
+
 ![alt text](./images/create_ticket.png)
 #### Clicking "Create" button will direct user to the Home page which now reflects the newly created "ticket"
 ![alt text](./images/updated_home.png)
