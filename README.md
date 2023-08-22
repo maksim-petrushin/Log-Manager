@@ -2,6 +2,11 @@
 ### Log Manager is a web board that can be used by a start up company to manage and visualize "logs".
 ### A "log" is a time-stamped documentation of events related to work operations
 
+### Demonstration links:
+[Adding a new log] (####-adding-a-new-log)
+[Adding a new log] (####-adding-a-follow-up-on-a-log-and-sorting-logs-by-date)
+[Adding a new log] (####-filtering-or-isolating-all-time-logs-using-any-search-combination)
+
 #### Adding a new log
 ![1_create_log](https://github.com/maksim-petrushin/Maintenance-Operations-Board/assets/136845116/c84d5cae-eed4-415f-acc1-1bc96233e0c3)
 
