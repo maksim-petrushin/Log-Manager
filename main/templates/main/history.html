@@ -1,0 +1,58 @@
+{% extends "main/layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block scripts %}
+{% endblock %} 
+
+{% block body %}
+<hr>
+<form method="get">
+    {% csrf_token %}
+<div class="flex-container">
+    Title starts with: {{myFilter.form.title}}
+    Description starts with: {{myFilter.form.description}}
+    <br>
+    Created by: {{myFilter.form.creator}}
+    Department: {{myFilter.form.department}}
+
+</div>
+<input type="submit" name="Search">
+<hr>
+</form>
+<center>
+    <table border="2">
+        <tr>
+            <th>Creator</th>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Department</th>
+            <th>Status</th>
+            
+
+        </tr>
+        {% for ticket in tickets %}
+        <tr>
+            <td> {{ticket.creator }}</td>
+            <td> {{ticket.created_at}}</td>
+            <td> {{ticket.title}}</td>
+            <td>{{ticket.description}}</td>
+            <td>{{ticket.get_department_display}}</td>
+            <td>{{ticket.get_status_display}}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td>No Tickets yet</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+
+
+<hr>
+</center>
+
+{% endblock %}

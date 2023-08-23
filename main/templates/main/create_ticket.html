@@ -1,0 +1,36 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %} Create a ticket
+ {% endblock %}
+
+ {% block styles %}
+ <link rel="stylesheet" href="{% static '/styles/create_ticket.css' %}">
+ {% endblock %}
+
+{% block scripts %}
+<script src="{% static '/scripts/create_ticket.js' %}"></script>
+{% endblock %}
+ {% block body %}
+    <form id="create_ticket" action="{% url 'create_ticket' %}" method="post">
+        {% csrf_token %} 
+            
+                <label for="title">Title</label>
+                {{ form.title }}
+                <br>
+    
+                <label for="department">Department</label>
+                {{ form.department }}
+                <br>
+    
+            <div id="description">    
+                <label for="description">Description</label>
+                {{ form.description }}
+                <br>
+            </div>
+            
+            
+            <button type="submit" class="btn btn-success" name="submit" value="">Create</button>        
+    </form>
+ 
+
+ {% endblock %}

@@ -1,0 +1,101 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block title %}
+Tickets
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static '/scripts/home.js' %}" ></script>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static '/styles/home.css' %}">
+{% endblock %}
+
+{% block body %}
+<hr>
+<h1 class="text-center">Open Logs</h1>
+<hr>
+Date Filter: <select id="date" autocomplete="off">
+    <option value="1" selected >Newest First</option>
+    <option value="2" >Oldest First</option>
+</select>
+<hr>
+<div id="flex-container">
+{% for ticket in tickets %}
+
+
+<div>
+<div class="card mt-2" id="{{ticket.created_at}}">
+    <div class="card-header"> <strong>@{{ticket.creator}}</strong> ({{ticket.get_department_display}})   {{ticket.created_at}} </div>
+    <div class="card-body d-flex flex-row justify-content-between">
+        <div>
+            <h5 class="card-title"><a href="{% url 'task' ticket.id %}"> {{ticket.title}}</a></h5>
+            <p>{{ticket.description}}</p>
+        </div>
+        <div>
+            {% if user == ticket.creator or perms.main.delete_ticket %}
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" 
+                class="btn btn-danger" 
+                name="ticket-id" 
+                value="{{ticket.id}}">Close Log
+                </button>
+            </form>
+            {% endif %}
+        </div>
+       
+    </div>
+    <div class="d-flex flex-column-reverse">
+        <div class="card-body">
+        </div>
+        {% for follow in ticket.followup.all|slice:"0:3" %}
+        <div class="card-body" style="padding-bottom: 0;">
+            <hr>
+            <strong>
+                {{ follow.creator.username}} - 
+                {{follow.date_added}}
+            </strong>
+            <br>
+        
+            {{follow.description}}
+            <br>
+        </div>
+            {% empty %}
+            <div class="card-body" style="padding-bottom: 0;">
+            <hr>
+            No updates at this time.
+            <br>
+        </div>
+        {% endfor %}
+        <div class="card-body" style="height: 1rem; padding-bottom: 0;">
+            <h5><strong>Last 3 Updates:</strong></h5>
+        </div>
+    </div>
+    <a href="{% url 'task' ticket.id %}">
+        <div class="card-footer text-muted">
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Follow-up</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" required></textarea>
+                    </div>
+                        <div class="btn btn-warning">Add a follow-up</div>
+                </form>
+            </div>
+        </div>
+    </a>
+</div>
+    <hr>
+</div>
+
+
+{% empty %}
+<p>No tickets at this time</p>
+<hr>
+{% endfor %}
+</div>
+
+
+{% endblock %}
